@@ -13,6 +13,16 @@
     <script>
        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+    <script type="text/javascript">
+      // GitHub Pages redirect handler for single page applications
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLOGUS - Buy & Sell Locally | Free Classifieds UK</title>
