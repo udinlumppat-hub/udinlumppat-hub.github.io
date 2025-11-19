@@ -68,7 +68,7 @@ Preferred communication style: Simple, everyday language.
 - `lucide-react` - Icon library
 
 **Routing & Navigation**
-- `react-router-dom` - Client-side routing
+- `react-router-dom` - Client-side routing with HashRouter for GitHub Pages compatibility
 
 **Forms & Validation**
 - `react-hook-form` - Form state management
@@ -112,10 +112,16 @@ Preferred communication style: Simple, everyday language.
 - Module resolution set to "bundler" for optimal Vite compatibility
 
 **Build & Deployment**
-- Base path set to `/` for root deployment
+- Base path set to `/` for root deployment on GitHub Pages
+- Vite configured with `host: 0.0.0.0` and `port: 5000` for Replit environment
 - Development mode component tagging via `lovable-tagger` plugin
-- GitHub Pages deployment configured via `gh-pages` package
+- GitHub Pages deployment configured via `gh-pages` package and GitHub Actions workflow
 - Separate development and production build scripts
+- GitHub Pages SPA routing configured:
+  - HashRouter implementation for client-side routing compatibility
+  - 404.html redirect handler for direct navigation support
+  - .nojekyll file to prevent Jekyll processing
+  - sessionStorage-based redirect script in index.html
 
 **Accessibility & UX**
 - Radix UI primitives ensure WCAG compliance
